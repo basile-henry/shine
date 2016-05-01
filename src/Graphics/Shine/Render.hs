@@ -28,6 +28,7 @@ import Graphics.Shine.Image
 render :: CanvasRenderingContext2D -> Picture -> IO ()
 render _ Empty = return ()
 render ctx (Line x y x' y') = do
+    beginPath ctx
     moveTo ctx x y
     lineTo ctx x' y'
     stroke ctx
